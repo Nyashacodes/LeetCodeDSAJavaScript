@@ -25,7 +25,7 @@ var insertGreatestCommonDivisors = function(head) {
 
     while(node1.next !== null){
         let node2 = node1.next;
-        let gcdValue = gsd(node1.val, node2.val);
+        let gcdValue = gcd(node1.val, node2.val);
         let gcdNode = new ListNode(gcdValue);
         node1.next = gcdNode;
         gcdNode = node2;
