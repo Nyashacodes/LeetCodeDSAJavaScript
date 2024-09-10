@@ -15,7 +15,7 @@ var insertGreatestCommonDivisors = function(head) {
     const gcd=(a,b)=>{
         while(b !== 0){
             let temp = b;
-            b = b%a;
+            b = a%b;
             a = temp;
         };
         return a;   
@@ -28,7 +28,7 @@ var insertGreatestCommonDivisors = function(head) {
         let gcdValue = gcd(node1.val, node2.val);
         let gcdNode = new ListNode(gcdValue);
         node1.next = gcdNode;
-        gcdNode = node2;
+        gcdNode.next = node2;
         node1 = node2;
     }
 
